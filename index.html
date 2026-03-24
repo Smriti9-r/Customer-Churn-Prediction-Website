@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Customer Churn Predictor</title>
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="card">
+
+<h1>Customer Churn Prediction</h1>
+
+<p class="subtitle">
+Predict whether a customer is likely to leave the service
+</p>
+
+<form action="/predict" method="post">
+
+<h3>Customer Info</h3>
+
+<label>Tenure (months)</label>
+<input type="number" name="tenure" placeholder="Example: 24" required>
+
+<label>Monthly Charges</label>
+<input type="number" name="monthly" placeholder="Example: 75" required>
+
+<label>Total Charges</label>
+<input type="number" name="total" placeholder="Example: 1800" required>
+
+<h3>Personal Info</h3>
+
+<label>Senior Citizen</label>
+<select name="senior">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Partner</label>
+<select name="partner">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Dependents</label>
+<select name="dependents">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<h3>Service Info</h3>
+
+<label>Paperless Billing</label>
+<select name="paperless">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Fiber Internet</label>
+<select name="fiber">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Two Year Contract</label>
+<select name="twoyear">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Electronic Payment</label>
+<select name="electronic">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<button type="submit">Predict</button>
+
+<button type="reset" class="reset">Clear</button>
+
+<div class="result-box">
+
+{{result}}
+
+</div>
+
+</form>
+
+<p class="footer">
+Built using Machine Learning | Logistic Regression
+</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
